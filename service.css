@@ -145,3 +145,21 @@
     }
 }
 
+.loading {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.error {
+    color: #ff4444;
+    text-align: center;
+    padding: 2rem;
+}
+
+.no-results {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
