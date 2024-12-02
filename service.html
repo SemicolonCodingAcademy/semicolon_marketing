@@ -49,13 +49,23 @@
             const searchTerm = document.getElementById('placeSearch').value;
             if (!searchTerm) return;
 
-            fetch(`/api/places/search?query=${encodeURIComponent(searchTerm)}`)
-                .then(response => response.json())
-                .then(data => displayResults(data))
-                .catch(error => {
-                    console.error('검색 중 오류 발생:', error);
-                    alert('검색 중 오류가 발생했습니다.');
-                });
+            // 실제로는 API 호출이 들어가야 하지만, 예시로 더미 데이터를 사용
+            const dummyResults = [
+                {
+                    id: 1,
+                    name: searchTerm + " - 강남점",
+                    address: "서울 강남구 테헤란로 123",
+                    category: "음식점"
+                },
+                {
+                    id: 2,
+                    name: searchTerm + " - 서초점",
+                    address: "서울 서초구 서초대로 456",
+                    category: "음식점"
+                }
+            ];
+
+            displayResults(dummyResults);
         }
 
         function displayResults(results) {
@@ -100,24 +110,17 @@
 
         function analyzeKeyword() {
             const keyword = document.getElementById('keywordInput').value;
-            if (!keyword || !selectedPlace) return;
+            if (!keyword) return;
 
-            fetch('/api/keywords/analyze', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    placeId: selectedPlace.id,
-                    keyword: keyword
-                })
-            })
-            .then(response => response.json())
-            .then(data => displayAnalysis(data))
-            .catch(error => {
-                console.error('분석 중 오류 발생:', error);
-                alert('키워드 분석 중 오류가 발생했습니다.');
-            });
+            // 실제로는 API 호출이 필요합니다
+            // 예시 데이터로 결과를 보여줍니다
+            const analysisResult = {
+                currentRank: 15,
+                searchVolume: "월 1,200회",
+                competition: "중간"
+            };
+
+            displayAnalysis(analysisResult);
         }
 
         function displayAnalysis(result) {
