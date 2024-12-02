@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세미콜론 N사 플레이스 순위 상승 서비스</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="/logo.png" alt="세미콜론 로고">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#section1">서비스 소개</a></li>
+                <li><a href="#section2">광고비 효과</a></li>
+                <li><a href="#section3">순위 상승</a></li>
+                <li><a href="#section7">가격 안내</a></li>
+                <li><a href="#section8">무료 체험</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="image-container">
+            <div id="section1" class="landing-image">
+                <img src="/section-1.png" alt="N사 플레이스 순위 상승">
+            </div>
+            <div id="section2" class="landing-image">
+                <img src="/section-2.png" alt="광고비 효과">
+            </div>
+            <div id="section3" class="landing-image">
+                <img src="/section-3.png" alt="순위 상승 서비스">
+            </div>
+            <div id="section4" class="landing-image">
+                <img src="/section-4.png" alt="서비스 상세 구성">
+            </div>
+            <div id="section5" class="landing-image">
+                <img src="/section-5.png" alt="경쟁사 비교">
+            </div>
+            <div id="section6" class="landing-image">
+                <img src="/section-6.png" alt="서비스 강점">
+            </div>
+            <div id="section7" class="landing-image">
+                <img src="/section-7.png" alt="가격 및 패키지">
+            </div>
+            <div id="section8" class="landing-image">
+                <img src="/section-8.png" alt="무료 체험">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/logo.png" alt="세미콜론 로고">
+                </div>
+                <div class="footer-info">
+                    <div class="company-info">
+                        <h3>세미콜론</h3>
+                        <p>사업자등록번호: 123-45-67890</p>
+                        <p>대표: 홍길동</p>
+                        <p>주소: 서울특별시 강남구 테헤란로 123</p>
+                    </div>
+                    <div class="contact-info">
+                        <h3>고객센터</h3>
+                        <p>전화: 02-1234-5678</p>
+                        <p>이메일: help@semicolon.co.kr</p>
+                        <p>운영시간: 평일 10:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 세미콜론. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const headerOffset = 60;
+                const elementPosition = target.offsetTop;
+                const offsetPosition = elementPosition - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script>
+    // 스크롤 진행바
+    const addScrollProgress = () => {
+        const progressBar = document.createElement('div');
+        progressBar.className = 'scroll-progress';
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / windowHeight) * 100;
+            progressBar.style.width = `${progress}%`;
+        });
+    };
+
+    // 이미지 페이드인 효과
+    const observeImages = () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.landing-image').forEach(img => {
+            observer.observe(img);
+        });
+    };
+
+    // 헤더 스크롤 효과
+    const handleHeader = () => {
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                header.classList.add('hide');
+            } else {
+                header.classList.remove('hide');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    };
+
+    // 실행
+    document.addEventListener('DOMContentLoaded', () => {
+        addScrollProgress();
+        observeImages();
+        handleHeader();
+    });
+    </script>
+</body>
+</html> 
