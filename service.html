@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플레이스 순위 분석 - 세미콜론</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/logo.png" alt="세미콜론 로고">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">홈으로</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="service-main">
+        <div class="search-container">
+            <h1>플레이스 순위 분석</h1>
+            <div class="search-box">
+                <input type="text" id="placeSearch" placeholder="업체명을 입력해주세요">
+                <button type="button" id="searchButton">검색</button>
+            </div>
+            
+            <div class="search-results" id="searchResults">
+                <!-- 검색 결과가 여기에 표시됩니다 -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let selectedPlace = null;
+
+        document.getElementById('searchButton').addEventListener('click', searchPlace);
+        document.getElementById('placeSearch').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchPlace();
+            }
+        });
+
+        function searchPlace() {
+            const searchTerm = document.getElementById('placeSearch').value;
+            if (!searchTerm) return;
+
+            fetch(`/api/places/search?query=${encodeURIComponent(searchTerm)}`)
+                .then(response => response.json())
+                .then(data => displayResults(data))
+                .catch(error => {
+                    console.error('검색 중 오류 발생:', error);
+                    alert('검색 중 오류가 발생했습니다.');
+                });
+        }
+
+        function displayResults(results) {
+            const resultsContainer = document.getElementById('searchResults');
+            resultsContainer.innerHTML = '';
+
+            results.forEach(place => {
+                const placeElement = document.createElement('div');
+                placeElement.className = 'place-item';
+                placeElement.innerHTML = `
+                    <h3>${place.name}</h3>
+                    <p>${place.address}</p>
+                    <p class="category">${place.category}</p>
+                `;
+
+                placeElement.addEventListener('click', () => selectPlace(place));
+                resultsContainer.appendChild(placeElement);
+            });
+        }
+
+        function selectPlace(place) {
+            selectedPlace = place;
+            const searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = '';
+            
+            const selectedPlaceElement = document.createElement('div');
+            selectedPlaceElement.className = 'selected-place';
+            selectedPlaceElement.innerHTML = `
+                <h3>${place.name}</h3>
+                <p>${place.address}</p>
+                <p class="category">${place.category}</p>
+                <div class="keyword-search">
+                    <input type="text" id="keywordInput" placeholder="분석할 키워드를 입력해주세요">
+                    <button type="button" id="analyzeButton">분석하기</button>
+                </div>
+            `;
+            
+            searchResults.appendChild(selectedPlaceElement);
+            
+            document.getElementById('analyzeButton').addEventListener('click', analyzeKeyword);
+        }
+
+        function analyzeKeyword() {
+            const keyword = document.getElementById('keywordInput').value;
+            if (!keyword || !selectedPlace) return;
+
+            fetch('/api/keywords/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    placeId: selectedPlace.id,
+                    keyword: keyword
+                })
+            })
+            .then(response => response.json())
+            .then(data => displayAnalysis(data))
+            .catch(error => {
+                console.error('분석 중 오류 발생:', error);
+                alert('키워드 분석 중 오류가 발생했습니다.');
+            });
+        }
+
+        function displayAnalysis(result) {
+            const analysisElement = document.createElement('div');
+            analysisElement.className = 'analysis-result';
+            analysisElement.innerHTML = `
+                <h3>분석 결과</h3>
+                <div class="result-item">
+                    <p>현재 순위: <strong>${result.currentRank}위</strong></p>
+                    <p>월간 검색량: <strong>${result.searchVolume}</strong></p>
+                    <p>경쟁 강도: <strong>${result.competition}</strong></p>
+                </div>
+            `;
+
+            const searchResults = document.getElementById('searchResults');
+            searchResults.appendChild(analysisElement);
+        }
+    </script>
+</body>
+</html> 
