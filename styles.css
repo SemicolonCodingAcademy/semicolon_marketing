@@ -217,4 +217,59 @@ footer {
         gap: 2rem;
     }
 }
+
+.cta-button {
+    position: absolute;
+    bottom: 25%;  /* 위치 조정 가능 */
+    left: 50%;    /* 중앙 정렬을 위해 50%로 변경 */
+    transform: translateX(-50%); /* 중앙 정렬을 위해 추가 */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #00ff9d 0%, #00b8ff 100%);
+    color: #1E1E1E;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 157, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateX(-50%) translateY(-2px); /* 중앙 정렬 유지하면서 호버 효과 */
+    box-shadow: 0 6px 20px rgba(0, 255, 157, 0.4);
+}
+
+.cta-button span {
+    font-size: 1.1rem;
+}
+
+.cta-button svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover svg {
+    transform: translateX(4px);
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .cta-button {
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .cta-button:hover {
+        transform: translateX(-50%) translateY(-2px);
+    }
+    
+    .cta-button span {
+        font-size: 1rem;
+    }
+}
   
