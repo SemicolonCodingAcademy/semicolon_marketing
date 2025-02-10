@@ -1,1 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 - 세미콜론 마케팅</title>
+    <!-- 공통 스타일 -->
+    <link rel="stylesheet" href="/css/common/variables.css">
+    <link rel="stylesheet" href="/css/common/reset.css">
+    <link rel="stylesheet" href="/css/common/layout.css">
+    <link rel="stylesheet" href="/css/common/common.css">
+    <!-- 컴포넌트 스타일 -->
+    <link rel="stylesheet" href="/css/components/buttons.css">
+    <link rel="stylesheet" href="/css/components/cards.css">
+    <link rel="stylesheet" href="/css/components/forms.css">
+    <!-- 페이지 스타일 -->
+    <link rel="stylesheet" href="/css/pages/blog.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 페이지 스타일 -->
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/logo.svg" alt="세미콜론 마케팅">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/services.html">서비스</a></li>
+                <li><a href="/cases.html">성공사례</a></li>
+                <li><a href="/about.html">회사소개</a></li>
+                <li><a href="/blog" class="active">블로그</a></li>
+                <li><a href="/contact.html" class="btn btn-primary">문의하기</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
+    <!-- 히어로 섹션 -->
+    <section id="blog-hero">
+        <div class="hero-bg">
+            <div class="grid-pattern"></div>
+            <div class="gradient-orb"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fas fa-sparkles"></i> Latest Updates</span>
+                <h1>디지털 마케팅의<br>모든 인사이트</h1>
+                <p>세미콜론 마케팅이 전하는 최신 트렌드와 전략적 인사이트를 만나보세요</p>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="관심있는 주제를 검색해보세요">
+                    <div class="search-results">
+                        <!-- 검색 결과가 여기에 동적으로 표시됩니다 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 메인 콘텐츠 -->
+    <section id="blog-main">
+        <div class="container">
+            <div class="blog-container">
+                <!-- 사이드바 -->
+                <aside class="blog-sidebar">
+                    <div class="sidebar-section">
+                        <h3>카테고리</h3>
+                        <div class="category-filters">
+                            <button class="filter-btn active" data-category="all">
+                                <i class="fas fa-th-large"></i>
+                                <span>전체보기</span>
+                                <span class="count">0</span>
+                            </button>
+                            <button class="filter-btn" data-category="notice">
+                                <i class="fas fa-bullhorn"></i>
+                                <span>공지사항</span>
+                                <span class="count">0</span>
+                            </button>
+                            <button class="filter-btn" data-category="trend">
+                                <i class="fas fa-chart-line"></i>
+                                <span>트렌드</span>
+                                <span class="count">0</span>
+                            </button>
+                            <button class="filter-btn" data-category="tech">
+                                <i class="fas fa-microchip"></i>
+                                <span>기술</span>
+                                <span class="count">0</span>
+                            </button>
+                            <button class="filter-btn" data-category="case">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>사례연구</span>
+                                <span class="count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- 블로그 콘텐츠 -->
+                <div class="blog-content">
+                    <!-- 블로그 그리드 -->
+                    <div class="blog-grid">
+                        <!-- 포스트들이 동적으로 추가됩니다 -->
+                    </div>
+
+                    <!-- 페이지네이션 -->
+                    <div class="pagination">
+                        <button class="page-btn prev" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="page-numbers">
+                            <!-- 페이지 번호가 동적으로 추가됩니다 -->
+                        </div>
+                        <button class="page-btn next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터는 common.css에서 스타일링 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="..images/logo.svg" alt="세미콜론 마케팅" class="footer-logo">
+                    <p>데이터 기반 마케팅으로<br>비즈니스 성장을 가속화합니다</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>서비스</h4>
+                        <ul>
+                            <li><a href="/services">AI 마케팅</a></li>
+                            <li><a href="/services">데이터 분석</a></li>
+                            <li><a href="/services">자동화 솔루션</a></li>
+                            <li><a href="/services">콘텐츠 마케팅</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>회사소개</h4>
+                        <ul>
+                            <li><a href="/about">기업문화</a></li>
+                            <li><a href="/about">팀원소개</a></li>
+                            <li><a href="/about">채용정보</a></li>
+                            <li><a href="/about">오시는길</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>문의하기</h4>
+                        <ul>
+                            <li><a href="/contact">상담 신청</a></li>
+                            <li><a href="/contact">제휴 문의</a></li>
+                            <li><a href="/contact">도입 문의</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 세미콜론 마케팅. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">Blog</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/blog.js"></script>
+</body>
+</html>

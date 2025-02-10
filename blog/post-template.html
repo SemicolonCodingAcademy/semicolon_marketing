@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 포스트 제목 - 세미콜론 마케팅</title>
+    <!-- 공통 스타일 -->
+    <link rel="stylesheet" href="../css/common/variables.css">
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/layout.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <!-- 컴포넌트 스타일 -->
+    <link rel="stylesheet" href="../css/components/buttons.css">
+    <link rel="stylesheet" href="../css/components/cards.css">
+    <link rel="stylesheet" href="../css/components/forms.css">
+    <!-- 페이지 스타일 -->
+    <link rel="stylesheet" href="../css/pages/blog/post.css">
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="../images/logo.svg" alt="세미콜론 마케팅">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/services.html">서비스</a></li>
+                <li><a href="/cases.html">성공사례</a></li>
+                <li><a href="/about.html">회사소개</a></li>
+                <li><a href="/blog" class="active">블로그</a></li>
+                <li><a href="/contact.html" class="btn btn-primary">문의하기</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 블로그 포스트 -->
+    <article id="blog-post">
+        <!-- 블로그 포스트 히어로 섹션 -->
+        <section id="post-hero" class="hero-section">
+            <div class="container">
+                <div class="post-meta">
+                    <span class="category">카테고리</span>
+                    <span class="date">2024.03.15</span>
+                    <span class="read-time">10분 읽기</span>
+                </div>
+                <h1>블로그 포스트 제목이 들어갑니다</h1>
+                <div class="author">
+                    <img src="../images/author.jpg" alt="작성자 이름">
+                    <div class="author-info">
+                        <strong>작성자 이름</strong>
+                        <span>직책</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="post-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- 목차 -->
+                    <div class="table-of-contents">
+                        <h2>목차</h2>
+                        <ul>
+                            <li><a href="#section1">1. 첫 번째 섹션</a></li>
+                            <li><a href="#section2">2. 두 번째 섹션</a></li>
+                            <li><a href="#section3">3. 세 번째 섹션</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 본문 -->
+                    <div class="main-content">
+                        <img src="../images/blog/post-featured.jpg" alt="포스트 대표 이미지" class="featured-image">
+                        
+                        <section id="section1">
+                            <h2>첫 번째 섹션</h2>
+                            <p>본문 내용이 들어갑니다...</p>
+                        </section>
+
+                        <section id="section2">
+                            <h2>두 번째 섹션</h2>
+                            <p>본문 내용이 들어갑니다...</p>
+                        </section>
+
+                        <section id="section3">
+                            <h2>세 번째 섹션</h2>
+                            <p>본문 내용이 들어갑니다...</p>
+                        </section>
+
+                        <!-- 태그 -->
+                        <div class="post-tags">
+                            <span>태그:</span>
+                            <a href="#">마케팅</a>
+                            <a href="#">SEO</a>
+                            <a href="#">콘텐츠</a>
+                        </div>
+
+                        <!-- 공유하기 -->
+                        <div class="post-share">
+                            <span>공유하기:</span>
+                            <a href="#" class="share-link" aria-label="페이스북에 공유">
+                                <img src="../images/facebook.svg" alt="Facebook">
+                            </a>
+                            <a href="#" class="share-link" aria-label="트위터에 공유">
+                                <img src="../images/twitter.svg" alt="Twitter">
+                            </a>
+                            <a href="#" class="share-link" aria-label="링크드인에 공유">
+                                <img src="../images/linkedin.svg" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- 관련 포스트 -->
+    <section id="related-posts">
+        <div class="container">
+            <h2>관련 포스트</h2>
+            <div class="posts-grid">
+                <!-- 관련 포스트 카드 3개 -->
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="../images/blog/related1.jpg" alt="관련 포스트 1">
+                        <span class="category">SEO</span>
+                    </div>
+                    <div class="post-content">
+                        <h3><a href="#">관련 포스트 제목</a></h3>
+                        <div class="post-meta">
+                            <span class="date">2024.03.10</span>
+                            <span class="read-time">8분 읽기</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- 추가 관련 포스트 카드들 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 뉴스레터 구독 섹션 -->
+    <section id="newsletter">
+        <div class="container">
+            <h2>마케팅 인사이트 뉴스레터</h2>
+            <p>최신 마케팅 트렌드와 인사이트를 이메일로 받아보세요</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="이메일 주소를 입력하세요" required>
+                <button type="submit" class="btn btn-primary">구독하기</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 푸터는 common.css에서 스타일링 -->
+    <footer>
+        <!-- 기존 푸터 내용 동일 -->
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
