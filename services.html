@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서비스 - 세미콜론 마케팅</title>
+    <!-- 공통 스타일 -->
+    <link rel="stylesheet" href="css/common/variables.css">
+    <link rel="stylesheet" href="css/common/reset.css">
+    <link rel="stylesheet" href="css/common/layout.css">
+    <link rel="stylesheet" href="css/common/common.css">
+    <!-- 컴포넌트 스타일 -->
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 페이지 스타일 -->
+    <link rel="stylesheet" href="css/pages/services.css">
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="images/logo.svg" alt="세미콜론 마케팅">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/services.html" class="active">서비스</a></li>
+                <li><a href="/cases.html">성공사례</a></li>
+                <li><a href="/about.html">회사소개</a></li>
+                <li><a href="/blog">블로그</a></li>
+                <li><a href="/contact.html" class="btn btn-primary">문의하기</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section id="services-hero">
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <span class="hero-badge">Marketing Automation Service</span>
+                    <h1>마케팅 자동화의<br>새로운 <span class="text-gradient">패러다임</span></h1>
+                    <p>AI 기술과 빅데이터로 구현하는 스마트한 마케팅 솔루션</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">무료 상담 신청</a>
+                        <a href="#features" class="btn btn-outline">서비스 살펴보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 핵심 기능 섹션 -->
+    <section id="core-features">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-main">
+                            <div class="stat-value">98</div>
+                            <div class="stat-unit">%</div>
+                        </div>
+                        <div class="stat-label">마케팅 효율 증가</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-main">
+                            <div class="stat-value">3</div>
+                            <div class="stat-unit">배</div>
+                        </div>
+                        <div class="stat-label">ROI 상승</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-main">
+                            <div class="stat-value">24</div>
+                            <div class="stat-unit">시간</div>
+                        </div>
+                        <div class="stat-label">실시간 최적화</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <div class="badge-wrapper">
+                    <span class="section-badge">Core Features</span>
+                </div>
+                <h2 class="section-title">마케팅 자동화의 핵심 기능</h2>
+                <p class="section-desc">세미콜론 마케팅의 차별화된 기술로 성공적인 마케팅을 경험하세요</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2C8.27 2 2 8.27 2 16C2 23.73 8.27 30 16 30C23.73 30 30 23.73 30 16C30 8.27 23.73 2 16 2ZM16 28C9.383 28 4 22.617 4 16C4 9.383 9.383 4 16 4C22.617 4 28 9.383 28 16C28 22.617 22.617 28 16 28Z" fill="#00A651"/>
+                            <path d="M16 8C11.582 8 8 11.582 8 16C8 20.418 11.582 24 16 24C20.418 24 24 20.418 24 16C24 11.582 20.418 8 16 8Z" fill="#00A651"/>
+                        </svg>
+                    </div>
+                    <h3>AI 마케팅 자동화</h3>
+                    <p>24시간 자동 최적화되는 마케팅 캠페인</p>
+                    <ul class="feature-list">
+                        <li>실시간 타겟팅</li>
+                        <li>자동 콘텐츠 생성</li>
+                        <li>성과 분석 리포트</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>데이터 분석</h3>
+                    <p>빅데이터 분석으로 인사이트를 도출합니다</p>
+                    <ul class="feature-list">
+                        <li>고객 행동 패턴 분석</li>
+                        <li>ROI 추적 및 분석</li>
+                        <li>실시간 대시보드</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>타겟팅 최적화</h3>
+                    <p>정확한 타겟팅으로 마케팅 효율을 높입니다</p>
+                    <ul class="feature-list">
+                        <li>AI 기반 세그먼테이션</li>
+                        <li>맞춤형 고객 여정 설계</li>
+                        <li>실시간 타겟팅 조정</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 서비스 프로세스 -->
+    <section id="service-process">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge-wrapper">
+                    <span class="section-badge">Process</span>
+                </div>
+                <h2 class="section-title">서비스 이용 프로세스</h2>
+                <p class="section-desc">간단한 4단계로 시작하는 마케팅 자동화</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="step-number">01</div>
+                    <h3>무료 상담</h3>
+                    <p>전문가와 상담을 통해<br>최적의 솔루션을 찾아보세요</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="step-number">02</div>
+                    <h3>맞춤 제안</h3>
+                    <p>비즈니스에 최적화된<br>맞춤형 전략을 제안합니다</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="step-number">03</div>
+                    <h3>서비스 시작</h3>
+                    <p>전담 매니저와 함께<br>서비스를 시작합니다</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="step-number">04</div>
+                    <h3>성과 분석</h3>
+                    <p>데이터 기반으로<br>마케팅 성과를 분석합니다</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 요금제 섹션 -->
+    <section id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge-wrapper">
+                    <span class="section-badge">Pricing</span>
+                </div>
+                <h2 class="section-title">합리적인 요금제</h2>
+                <p class="section-desc">비즈니스 규모에 맞는 최적의 요금제를 선택하세요</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Starter</h3>
+                        <div class="plan-price">
+                            <span class="currency">₩</span>
+                            <span class="amount">490,000</span>
+                            <span class="period">/월</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>기본 마케팅 자동화</li>
+                        <li><i class="fas fa-check"></i>월 5개 캠페인</li>
+                        <li><i class="fas fa-check"></i>기본 리포트 제공</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">시작하기</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="plan-badge">Best Choice</div>
+                    <div class="plan-header">
+                        <h3 class="plan-name">Professional</h3>
+                        <div class="plan-price">
+                            <span class="currency">₩</span>
+                            <span class="amount">990,000</span>
+                            <span class="period">/월</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>고급 마케팅 자동화</li>
+                        <li><i class="fas fa-check"></i>무제한 메시지 발송</li>
+                        <li><i class="fas fa-check"></i>고급 데이터 분석</li>
+                        <li><i class="fas fa-check"></i>24/7 기술 지원</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">시작하기</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <div class="plan-price">
+                            <span class="amount">상담 문의</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i>맞춤형 자동화 솔루션</li>
+                        <li><i class="fas fa-check"></i>전용 API 제공</li>
+                        <li><i class="fas fa-check"></i>맞춤형 보고서</li>
+                        <li><i class="fas fa-check"></i>전담 매니저 배정</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">문의하기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 문의하기 섹션 -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>맞춤 서비스 상담</h2>
+                <p>귀사에 가장 적합한 마케팅 전략을<br>세미콜론 마케팅의 전문가와 상담해보세요.</p>
+            </div>
+            <div class="contact-form-wrapper">
+                <form id="inquiryForm">
+                    <div class="form-group">
+                        <input type="text" name="company" id="company" placeholder="회사명" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="이름" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="이메일" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" id="phone" placeholder="연락처" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="service" id="service" required>
+                            <option value="">관심 서비스 선택</option>
+                            <option value="퍼포먼스 마케팅">퍼포먼스 마케팅</option>
+                            <option value="SNS 마케팅">SNS 마케팅</option>
+                            <option value="콘텐츠 마케팅">콘텐츠 마케팅</option>
+                            <option value="브랜딩">브랜딩</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="문의 내용을 입력해주세요." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">상담 신청하기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터는 common.css에서 스타일링 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.svg" alt="세미콜론 마케팅" class="footer-logo">
+                    <p>데이터 기반 마케팅으로<br>비즈니스 성장을 가속화합니다</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>서비스</h4>
+                        <ul>
+                            <li><a href="/services">AI 마케팅</a></li>
+                            <li><a href="/services">데이터 분석</a></li>
+                            <li><a href="/services">자동화 솔루션</a></li>
+                            <li><a href="/services">콘텐츠 마케팅</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>회사소개</h4>
+                        <ul>
+                            <li><a href="/about">기업문화</a></li>
+                            <li><a href="/about">팀원소개</a></li>
+                            <li><a href="/about">채용정보</a></li>
+                            <li><a href="/about">오시는길</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>문의하기</h4>
+                        <ul>
+                            <li><a href="/contact">상담 신청</a></li>
+                            <li><a href="/contact">제휴 문의</a></li>
+                            <li><a href="/contact">도입 문의</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 세미콜론 마케팅. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">Blog</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- 기존 스크립트 -->
+    <script src="js/main.js"></script>
+    <!-- 문의 폼 처리 스크립트 -->
+    <script src="js/contact.js"></script>
+</body>
+</html> 
