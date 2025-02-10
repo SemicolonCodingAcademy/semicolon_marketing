@@ -1,0 +1,246 @@
+/* 메트릭스 섹션 스타일 */
+#metrics {
+    position: relative;
+    padding: 120px 0;
+    background: linear-gradient(180deg, #002018 0%, #001510 100%);
+    overflow: hidden;
+}
+
+.metrics-wrapper {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.metrics-content {
+    max-width: 500px;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: rgba(0, 209, 154, 0.1);
+    border: 1px solid rgba(0, 209, 154, 0.2);
+    border-radius: 50px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    backdrop-filter: blur(10px);
+}
+
+.section-label::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+}
+
+.metrics-content h2 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    background: linear-gradient(45deg, #fff 30%, #00D19A 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.section-desc {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid rgba(0, 209, 154, 0.3);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.metric-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(0, 209, 154, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover .metric-icon {
+    transform: scale(1.1);
+    background: rgba(0, 209, 154, 0.2);
+}
+
+.metric-card h3 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(45deg, #fff, #00D19A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.metric-card h3 .suffix {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #fff, #00D19A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    opacity: 1;
+    margin-left: -4px;
+}
+
+.metric-card h3 .counter {
+    display: inline-block;
+}
+
+.metric-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.metric-detail {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover .metric-detail {
+    color: rgba(255, 255, 255, 0.8);
+    border-top-color: rgba(0, 209, 154, 0.2);
+}
+
+/* 애니메이션 */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 배경 효과 */
+.section-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.gradient-sphere {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, 
+        rgba(0, 209, 154, 0.1) 0%, 
+        rgba(0, 209, 154, 0) 70%);
+    border-radius: 50%;
+    top: -300px;
+    right: -200px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.grid-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-30px) scale(1.1);
+    }
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+    .metrics-wrapper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .metrics-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .section-desc {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .metrics-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-card {
+        padding: 30px;
+    }
+} 

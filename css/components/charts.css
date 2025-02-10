@@ -1,0 +1,45 @@
+/* 차트 컨테이너 스타일 */
+.chart-container {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.chart-header h4 {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.chart-content {
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar-container {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.bar {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px 6px 0 0;
+    transform-origin: bottom;
+    transition: height 1s ease;
+}
+
+.bar.current {
+    background: linear-gradient(180deg, #00D19A 0%, rgba(0, 209, 154, 0.5) 100%);
+} 
