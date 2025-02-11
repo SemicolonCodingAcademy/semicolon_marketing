@@ -1,0 +1,438 @@
+/* Growth 섹션 기본 스타일 */
+.growth-section {
+    padding: 140px 0;
+    background: linear-gradient(180deg, var(--dark-bg) 0%, #001510 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 섹션 헤더 스타일 개선 */
+.section-header {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.section-label {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(0, 166, 81, 0.1);
+    border-radius: 30px;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.section-header h2 {
+    font-size: 3.2rem;
+    background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* 배경 효과 */
+.growth-section::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, 
+        rgba(0, 255, 178, 0.03) 0%,
+        rgba(0, 166, 81, 0.02) 30%,
+        rgba(0, 255, 178, 0.01) 50%,
+        transparent 70%);
+    z-index: 0;
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.growth-section::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -5%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, 
+        rgba(0, 166, 81, 0.03) 0%,
+        rgba(0, 255, 178, 0.02) 40%,
+        transparent 70%);
+    z-index: 0;
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+/* 프레임워크 섹션 */
+.growth-framework {
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+}
+
+.framework-intro {
+    text-align: center;
+    margin-bottom: 80px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.framework-intro h3 {
+    font-size: 2.5rem;
+    color: var(--light-text);
+    margin-bottom: 24px;
+    line-height: 1.3;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 3s ease infinite;
+}
+
+.framework-intro p {
+    font-size: 1.2rem;
+    color: var(--gray-text);
+    line-height: 1.6;
+}
+
+/* AARRR 프레임워크 그리드 */
+.framework-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+}
+
+/* 프레임워크 카드 스타일 개선 */
+.framework-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px 30px;
+    border-radius: 30px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.framework-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(0, 255, 179, 0.3) 50%, 
+        transparent 100%
+    );
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.framework-card::after {
+    content: attr(data-number);
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.1;
+    transition: all 0.4s ease;
+}
+
+.icon-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #00ffb3 100%);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    font-size: 1.8rem;
+    color: rgba(0, 0, 0, 0.8);
+    transform: rotate(-5deg);
+    transition: all 0.4s ease;
+}
+
+.icon-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    filter: blur(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    border-radius: 24px;
+}
+
+.framework-card h4 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+.framework-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+}
+
+.framework-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    border-color: rgba(0, 166, 81, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.2),
+        0 0 20px rgba(0, 255, 179, 0.1);
+}
+
+.framework-card:hover::before {
+    opacity: 1;
+}
+
+.framework-card:hover .icon {
+    transform: rotate(0deg) scale(1.1);
+}
+
+.framework-card:hover .icon-glow {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+.framework-card:hover::after {
+    opacity: 0.15;
+    transform: scale(1.1);
+}
+
+/* 특징 카드 */
+.growth-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-card h4 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 20px 0 15px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.feature-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(0, 166, 81, 0.1) 0%, rgba(0, 255, 179, 0.1) 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(0, 255, 179, 0.1) 100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(0, 166, 81, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover .feature-icon::after {
+    opacity: 1;
+}
+
+/* 애니메이션 */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+    .framework-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .growth-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .growth-section {
+        padding: 80px 0;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .framework-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .growth-features {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .framework-card, .feature-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .framework-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .framework-card .icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #00ffb3 100%);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 24px;
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.service-icon .icon-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+    border-radius: inherit;
+    opacity: 0.5;
+}
+
+.load-more-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.load-more-btn {
+    background: rgba(0, 166, 81, 0.1);
+    color: var(--primary-color);
+    border: 1px solid rgba(0, 166, 81, 0.2);
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.load-more-btn:hover {
+    background: rgba(0, 166, 81, 0.2);
+    transform: translateY(-2px);
+}
+
+.load-more-btn i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.load-more-btn:hover i {
+    transform: translateY(2px);
+}
