@@ -1,0 +1,16 @@
+.typing-text {
+    position: relative;
+    color: var(--primary-color);
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 700;
+    background: linear-gradient(45deg, #00D19A, #00ffbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(0, 209, 154, 0.3);
+}
+
+@keyframes cursor-blink {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-color) }
+} 
