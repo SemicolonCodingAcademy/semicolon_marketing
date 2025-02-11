@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCharts();
     initCasesFilter();
     initStats();
+    typeText(document.querySelector('.typing-text'), document.querySelector('.typing-text').textContent);
 });
 
 // 모바일 메뉴 초기화
@@ -153,4 +154,20 @@ function initStats() {
             stat.element.textContent = stat.value;
         }
     });
+}
+
+// 타이핑 효과 함수
+function typeText(element, text, speed = 100) {
+    let index = 0;
+    element.textContent = '';
+    
+    function type() {
+        if (index < text.length) {
+            element.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, speed);
+        }
+    }
+    
+    type();
 }
