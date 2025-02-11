@@ -321,12 +321,13 @@
                 </div>
             </div>
 
+            <!-- 필터 버튼 -->
             <div class="cases-filter">
-                <button class="filter-button active">전체</button>
-                <button class="filter-button">요식업</button>
-                <button class="filter-button">의료업</button>
-                <button class="filter-button">금융업</button>
-                <button class="filter-button">이커머스</button>
+                <button class="filter-button active" data-filter="all">전체</button>
+                <button class="filter-button" data-filter="restaurant">요식업</button>
+                <button class="filter-button" data-filter="medical">의료업</button>
+                <button class="filter-button" data-filter="finance">금융업</button>
+                <button class="filter-button" data-filter="ecommerce">이커머스</button>
             </div>
 
             <div class="cases-grid">
@@ -917,6 +918,6 @@
     <!-- 문의 폼 처리 스크립트 -->
     <script src="js/contact.js"></script>
     <!-- 성공사례 필터 스크립트 -->
-    <script src="js/cases-filter.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
