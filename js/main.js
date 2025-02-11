@@ -143,9 +143,9 @@ function initCasesFilter() {
 // 통계 숫자 초기화 및 애니메이션
 function initStats() {
     const stats = [
-        { element: document.querySelector('.stats-grid .stat-card:nth-child(1) .stat-value'), value: 98 },
-        { element: document.querySelector('.stats-grid .stat-card:nth-child(2) .stat-value'), value: 3 },
-        { element: document.querySelector('.stats-grid .stat-card:nth-child(3) .stat-value'), value: 24 }
+        { element: document.querySelector('.stats-grid .stat-card:nth-child(1) .stat-value'), value: 72 },
+        { element: document.querySelector('.stats-grid .stat-card:nth-child(2) .stat-value'), value: "24/7" },
+        { element: document.querySelector('.stats-grid .stat-card:nth-child(3) .stat-value'), value: 100 }
     ];
 
     stats.forEach(stat => {
