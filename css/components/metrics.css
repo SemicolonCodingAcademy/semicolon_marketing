@@ -243,4 +243,57 @@
     .metric-card {
         padding: 30px;
     }
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* 모든 단위(년, +, x, %) 스타일 */
+.stat-value span,
+.stat-value .plus,
+.stat-value .percent,
+.stat-value .multiply {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    opacity: 1;
+    margin-left: 4px;
+}
+
+/* 특별한 단위들에 대한 추가 스타일 */
+.stat-value .plus {
+    color: var(--primary-color);
+}
+
+.stat-value .percent {
+    color: var(--primary-color);
+}
+
+.stat-value .multiply {
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
 } 
